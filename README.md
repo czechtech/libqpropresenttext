@@ -1,7 +1,7 @@
 libqpropresenttext
 ==================
 
-Qt Library for ProPresenter's Textstream
+Qt Library for ProPresenter's Text Stream
 
 
 Installation
