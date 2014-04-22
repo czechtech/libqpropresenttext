@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QDebug>
 #include <QTcpSocket>
+#include <QAbstractSocket>
 #include <QTextStream>
 #include <QXmlStreamReader>
 
@@ -34,7 +35,7 @@ private:
 	//
 
 public:
-	//
+	QAbstractSocket::SocketState connectionState() { return m_socket->state(); }
 	QString currentSlide()        { return m_currentSlide; }
 	QString nextSlide()           { return m_nextSlide; }
 	QString getHostName()         { return m_hostName; }
