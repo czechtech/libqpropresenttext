@@ -45,8 +45,8 @@ public slots:
 signals:
 	void connected();
 	void disconnected();
-	void currentSlide(QString text);
-	void nextSlide(QString text);
+	void currentSlideChanged(QString text);
+	void    nextSlideChanged(QString text);
 
 };
 

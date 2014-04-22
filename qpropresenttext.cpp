@@ -85,14 +85,14 @@ QProPresentText::onSocketReadyRead()
 				if(a.value("identifier") == "CurrentSlide") {
 					QString text = xml.readElementText();
 					if(m_currentSlide != text) {
-						emit currentSlide(text);
+						emit currentSlideChanged(text);
 						m_currentSlide = text;
 					}
 				}
 				if(a.value("identifier") == "NextSlide") {
 					QString text = xml.readElementText();
 					if(m_nextSlide != text) {
-						emit nextSlide(text);
+						emit nextSlideChanged(text);
 						m_nextSlide = text;
 					}
 				}

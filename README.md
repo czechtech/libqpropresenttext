@@ -36,8 +36,8 @@ Connect the signal/slot in the constructor of your main class.
 
     connect(&m_ppt, SIGNAL(connected()), this, SLOT(onPPConnected()));
     connect(&m_ppt, SIGNAL(disconnected()), this, SLOT(onPPDisconnected()));
-    connect(&m_ppt, SIGNAL(nextSlide(QString)), this, SLOT(onPPNextSlide(QString)));
-    connect(&m_ppt, SIGNAL(currentSlide(QString)), this, SLOT(onPPCurrentSlide(QString)));
+    connect(&m_ppt, SIGNAL(nextSlideChanged(QString)), this, SLOT(onPPNextSlide(QString)));
+    connect(&m_ppt, SIGNAL(currentSlideChanged(QString)), this, SLOT(onPPCurrentSlide(QString)));
 
 Instantiate a QProPresentText object.
 

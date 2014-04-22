@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
   TestClass t;
   QProPresentText p(NULL);
   p.connectToProPresent(argv[1], 45578, "password");
-  QObject::connect(&p, SIGNAL(connected()), &t, SLOT(onPPConnected()));
-  QObject::connect(&p, SIGNAL(disconnected()), &t, SLOT(onPPDisconnected()));
-  QObject::connect(&p, SIGNAL(nextSlide(QString)), &t, SLOT(onPPNextSlide(QString)));
-  QObject::connect(&p, SIGNAL(currentSlide(QString)), &t, SLOT(onPPCurrentSlide(QString)));
+  QObject::connect(p, SIGNAL(connected()), &t, SLOT(onPPConnected()));
+  QObject::connect(p, SIGNAL(disconnected()), &t, SLOT(onPPDisconnected()));
+  QObject::connect(p, SIGNAL(nextSlideChanged(QString)), &t, SLOT(onPPNextSlide(QString)));
+  QObject::connect(p, SIGNAL(currentSlideChanged(QString)), &t, SLOT(onPPCurrentSlide(QString)));
   
   return a->exec();
 }
