@@ -66,7 +66,9 @@ Notes
 
 At present, you need to know the IP address of the ProPresenter computer. Because ProPresenter's service is announced using mDNS, perhaps in the future QPrePresentText can query for this.
 
-Only the text of the current slide and next slide is provided. QProPresentText could easily be extended to access the DisplayLayouts, 
+QProPresentText keeps a buffer of the current slide and next slide. Check the connection status before assuming they are active.
+
+Only the text of the current slide and next slide is provided. QProPresentText could easily be extended to access the DisplayLayouts.
 
 
 To Do
