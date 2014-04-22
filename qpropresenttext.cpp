@@ -34,7 +34,13 @@ QProPresentText::connectToProPresent(const QString & hostName, quint16 port, con
 	m_hostName = hostName;
 	m_password = password;
 
+	if(m_socket->state() != QAbstractSocket::UnconnectedState) {
+		// Temporarily don't emit disconnect signals?
+		disconnectFromProPresent();
+	}
 	m_socket->connectToHost(hostName, port);
+	delete m_instream;
+	m_instream = new QTextStream(m_socket);
 }
 
 // public:
