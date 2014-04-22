@@ -35,6 +35,10 @@ private:
 
 public:
 	//
+	QString currentSlide()        { return m_currentSlide; }
+	QString nextSlide()           { return m_nextSlide; }
+	QString getHostName()         { return m_hostName; }
+	quint16 getPort()             { return m_port; }
 
 public slots:
 	void onSocketConnect();
