@@ -113,6 +113,7 @@ QProPresentText::onSocketReadyRead()
 void
 QProPresentText::onSocketDisconnect()
 {
+	// Don't clear m_currentSlide or m_nextSlide. These are buffers.
 	emit disconnected();
 }
 
